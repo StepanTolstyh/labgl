@@ -1,0 +1,21 @@
+<form [formGroup]="productForm">
+<div class="row mt-4">
+    <div class="col-6">
+        <input type="text" class="form-control" 
+        formControlName="name" 
+        placeholder="Название">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" 
+        formControlName="price" 
+        placeholder="Цена">
+    </div>
+</div>
+<div class="row my-2">
+    <div class="col-12">
+        <button (click)="onAddProduct()" [disabled]="productForm.invalid" class="btn btn-primary">Добавить</button>
+    </div>
+</div>
+
+
+</form>
